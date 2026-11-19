@@ -112,6 +112,18 @@ Add these as prototypes need them. Install new dependencies at the repo root.
 | Browser automation | Playwright (thumbnails, visual checks, demo videos) |
 | Native app wrapper | Capacitor, if a prototype graduates to the App Store |
 
+## Foundation definition of done
+
+Before declaring the foundation complete, verify each item:
+
+- The app runs locally and a production build succeeds.
+- The homepage supports search, visible prototype tags, tag filtering, a hidden-prototype toggle, and static light and dark thumbnails.
+- Production requests pass through the password gate; the public route serves only prototypes explicitly marked public.
+- The root rules file tells a future agent how to create a prototype from its folder and docs through thumbnail capture, checks, branch, and pull request.
+- Thumbnail capture works for one slug, several slugs, and missing thumbnails only.
+- At least one decomposed example prototype follows the prototype rules, with metadata, current HOW_IT_WORKS documentation, shared control panel, Reset and Randomize, mobile layout, and light and dark themes. Color garden is the foundation example.
+- AGENTS.md contains the non-negotiable prototype rules and workflow rules as direct instructions to future agents.
+
 ## Workflow rules
 
 - Start repository work on a `codex/` feature branch. When the repository has a configured remote and authenticated GitHub access, commit the finished change, push the branch, and open a pull request. The PR must trigger the configured build check and preview deployment; do not merge it unless the owner asks.
