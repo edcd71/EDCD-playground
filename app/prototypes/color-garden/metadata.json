@@ -1,0 +1,11 @@
+{
+  "slug": "color-garden",
+  "title": "Color garden",
+  "description": "Grow a gentle palette from a feeling, a place, or a passing thought.",
+  "tags": ["color", "palette", "tools"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-19T20:36:41.000Z",
+  "hidden": false,
+  "public": false,
+  "category": "Tools"
+}
