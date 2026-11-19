@@ -75,7 +75,7 @@ export function PrototypeGallery({ prototypes }: { prototypes: PrototypeMetadata
               <Input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Find something…" className="h-11 w-full pl-9"/>
             </label>
             <Select value={tag} onValueChange={setTag}>
-              <SelectTrigger className="h-11 w-[132px] shrink-0 data-[size=default]:h-11 sm:w-[150px]" aria-label="Filter by tag"><SelectValue/></SelectTrigger>
+              <SelectTrigger className="h-11 w-[132px] shrink-0 data-[size=default]:h-11 sm:w-[150px]" aria-label="Filter by tag"><SelectValue placeholder="All tags"/></SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All tags</SelectItem>
                 {tags.map((item) => <SelectItem key={item} value={item}>{item}</SelectItem>)}
