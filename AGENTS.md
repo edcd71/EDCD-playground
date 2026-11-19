@@ -95,6 +95,23 @@ This is a private, personal collection of small apps, games, simulations, and to
 - Do not merge a pull request or promote a preview to production unless the owner asks. Push the feature branch and open a pull request when repository access is configured, following the workflow rules below.
 - When verification is requested, run the production build and capture the affected thumbnail(s) in both themes. Describe exactly what passed and what could not be checked.
 
+## Suggested libraries
+
+Add these as prototypes need them. Install new dependencies at the repo root.
+
+| Need | Suggestions |
+| --- | --- |
+| 3D / WebGL | three.js, React Three Fiber |
+| Physics | Rapier, Matter.js |
+| Charts | Recharts, or plain SVG for sparklines |
+| Maps | MapLibre GL |
+| Text layout / typography effects | `@chenglou/pretext` |
+| Audio / synths | Web Audio API, Tone.js |
+| AI | Anthropic SDK (or your provider's SDK), server-side |
+| Generated UI from JSON | json-render or similar |
+| Browser automation | Playwright (thumbnails, visual checks, demo videos) |
+| Native app wrapper | Capacitor, if a prototype graduates to the App Store |
+
 ## Workflow rules
 
 - Start repository work on a `codex/` feature branch. When the repository has a configured remote and authenticated GitHub access, commit the finished change, push the branch, and open a pull request. The PR must trigger the configured build check and preview deployment; do not merge it unless the owner asks.
