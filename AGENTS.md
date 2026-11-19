@@ -109,7 +109,7 @@ This is a private, personal collection of small apps, games, simulations, and to
 - Check `document.documentElement.scrollWidth` at 375px. Decorative artwork positioned past the viewport caused horizontal scrolling on the gallery until its mobile offset was corrected.
 - Prefer reducers for timer state transitions and `useSyncExternalStore` for browser-owned state such as time and media queries. Direct state synchronization in effects tripped the React hooks lint rule; defer browser storage hydration until after mount and keep effects for subscriptions and cleanup.
 
-- Before sharing a Vercel preview, confirm the Vercel GitHub App has access to the repo and add Preview-only `SITE_PASSWORD` and `AUTH_SECRET`; missing auth configuration returns 503. Keep the values out of Git.
+- Vercel Preview builds also set `NODE_ENV=production`. Check `VERCEL_ENV === "production"` before enforcing the app password gate; this project's Preview URLs use Vercel Authentication. Keep `SITE_PASSWORD` and `AUTH_SECRET` required only for Production, and confirm GitHub App access before enabling automatic previews.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
