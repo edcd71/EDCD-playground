@@ -117,7 +117,7 @@ Add these as prototypes need them. Install new dependencies at the repo root.
 Before declaring the foundation complete, verify each item:
 
 - The app runs locally and a production build succeeds.
-- The homepage supports search, visible prototype tags, tag filtering, a hidden-prototype toggle, and static light and dark thumbnails.
+- The homepage supports search, visible prototype tags, tag filtering, a hidden-prototype toggle, and static light and dark thumbnails; a deployed smoke check confirms prototype cards render instead of the empty fallback.
 - Production requests pass through the password gate; the public route serves only prototypes explicitly marked public.
 - The root rules file tells a future agent how to create a prototype from its folder and docs through thumbnail capture, checks, branch, and pull request.
 - Thumbnail capture works for one slug, several slugs, and missing thumbnails only.
@@ -139,6 +139,8 @@ Before declaring the foundation complete, verify each item:
 - Prefer reducers for timer state transitions and `useSyncExternalStore` for browser-owned state such as time and media queries. Direct state synchronization in effects tripped the React hooks lint rule; defer browser storage hydration until after mount and keep effects for subscriptions and cleanup.
 
 - Vercel Preview builds also set `NODE_ENV=production`. Check `VERCEL_ENV === "production"` before enforcing the app password gate; this project's Preview URLs use Vercel Authentication. Keep `SITE_PASSWORD` and `AUTH_SECRET` required only for Production, and confirm GitHub App access before enabling automatic previews.
+
+- Dynamic filesystem discovery can return an empty catalog in a production deployment even when the build succeeds. For Vercel, add narrow outputFileTracingIncludes patterns for the runtime metadata and page files, then check the deployed homepage contains prototype cards.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
