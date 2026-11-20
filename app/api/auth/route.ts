@@ -4,7 +4,10 @@ import { createSessionToken, hasAuthConfiguration, isValidPassword, SESSION_COOK
 export const runtime = "nodejs";
 
 export async function POST(request: NextRequest) {
-  if (process.env.NODE_ENV !== "production") return NextResponse.json({ ok: true });
+  const isProductionDeployment = process.env.VERCEL_ENV
+    ? process.env.VERCEL_ENV === "production"
+    : process.env.NODE_ENV === "production";
+  if (!isProductionDeployment) return NextResponse.json({ ok: true });
   if (!hasAuthConfiguration()) return NextResponse.json({ error: "Private access is not configured." }, { status: 503, headers: { "Cache-Control": "no-store" } });
   let password: unknown;
   try { password = (await request.json()).password; } catch { return NextResponse.json({ error: "Enter the workspace password." }, { status: 400 }); }
