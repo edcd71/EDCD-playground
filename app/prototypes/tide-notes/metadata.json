@@ -1,0 +1,11 @@
+{
+  "slug": "tide-notes",
+  "title": "Tide notes",
+  "description": "Keep a small record of the rhythms and details around you.",
+  "tags": ["notes", "observation", "explore"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-19T20:09:58.000Z",
+  "hidden": false,
+  "public": false,
+  "category": "Explore"
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "slow-clock",
+  "title": "The slow clock",
+  "description": "A clock that asks you to notice the day instead of count it.",
+  "tags": ["time", "clock", "play"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-19T20:36:41.000Z",
+  "hidden": false,
+  "public": false,
+  "category": "Play"
+}
